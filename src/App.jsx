@@ -1,8 +1,8 @@
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import TimeDate from './components/TimeDate.jsx'
 import kfupmLogo from './assets/kfupm-logo-300x284.webp'
-
+import Contact from './components/Contact.jsx'
 
 function App() {
 
@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
+      <a href="https://www.kfupm.edu.sa/"><img src={kfupmLogo} alt="KFUPM Logo" id="logo" /></a>
 
       <div id="wrap">
-        <a href="https://www.kfupm.edu.sa/"><img src={kfupmLogo} alt="KFUPM Logo" id="logo" /></a>
 
         <TimeDate />
 
@@ -61,31 +61,14 @@ function App() {
           <a href="assets/webdev.jpg" target="_blank"><img src="assets/webdev.jpg" alt="Web Development"
             class="projImg" /></a>
         </div>
-
         <section id="contact">
-          <form action="mailto:ridalqattan@gmail.com" method="post" encType="text/plain" >
-            <h2>Contact</h2>
-            <div id="box4" className="box">
-              <p>
-                <label for="name">Name: </label>
-                <input type="text" id="name" name="name" placeholder="Enter Your Name" />
-              </p>
+          <h2>Contact</h2>
 
-              <p>
-                <label for="email">Email: </label>
-                <input type="email" id="email" name="email" placeholder="Enter Your Email" />
-              </p>
-
-              <p>
-                <label for="message">Message: </label>
-                <textarea id="message" name="message" placeholder="Enter your message here..." />
-              </p>
-
-              <input type="submit" id="submit" value="Send" />
-            
+          <div id="box4" className="box">
+            <Contact />
           </div>
-          </form>
         </section>
+
       </div>
 
     </>
