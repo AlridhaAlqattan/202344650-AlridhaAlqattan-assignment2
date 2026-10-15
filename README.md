@@ -1,22 +1,16 @@
-# 202344650-AlridhaAlqattan-assignment1
+# React + Vite
 
-## Project Description
-- A website which can be used as introduction or a portfolio about me and my previous experiences aswell as a way to contact me.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Setup instruction
-- You need to clone the repository into your system and run the index.html using a browser capable of showing the CSS and JS elements correctly.
+Currently, two official plugins are available:
 
-## AI Use Summary
-- AI was used as a helper not as a plagiarism tool. Only suggestions or corrections were taken from AI.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Features
-- Live Date and Time display made with JS.
-- Navigation Menu to the different section:
-    - About Me.
-    - Projects.
-    - Contact.
-- Contact By inputting Name, Email and write a message.
-- Images that generally show the topic of my projects.
-- A KFUPM logo on the corner of the website that is fixed and in the background.
-- Colorful boxes.
-- Linear Gradient background.
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
