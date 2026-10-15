@@ -7,6 +7,8 @@ function Contact() {
     message: ''
   });
 
+  const [error, setError] = useState('');
+
   function handleSubmit(event) {
     event.preventDefault();
     
@@ -16,12 +18,12 @@ function Contact() {
     const message = form.message.value;
 
     if (!name || !email || !message) {
-      alert('You need to fill in all fields before submitting the form.');
+      setError('You need to fill in all fields before submitting the form.');
       return;
     }
 
     if (!email.includes('@') || !email.endsWith('.com')) {
-        alert('Email must contain "@" and end with ".com".');
+        setError('Email must contain "@" and end with ".com".');
         return;
     }
 
@@ -31,7 +33,7 @@ function Contact() {
   }
   
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} noValidate>
       <div>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" required />
@@ -44,6 +46,7 @@ function Contact() {
         <label htmlFor="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
       </div>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit" id="submit">Send Message</button>
     </form>
   );

@@ -9,7 +9,6 @@ body {
     display: flex;
     background-color: lightblue;
     border-style: solid;
-    width: 80%;
     align-items: center;
     text-align: center;
     justify-content: center;

@@ -3,6 +3,7 @@ import './App.css'
 import TimeDate from './components/TimeDate.jsx'
 import kfupmLogo from './assets/kfupm-logo-300x284.webp'
 import Contact from './components/Contact.jsx'
+import JokeBox from './components/JokeBox.jsx'
 
 function App() {
 
@@ -22,11 +23,12 @@ function App() {
         </div>
 
         <h2>Navigation</h2> {/* This part shows the different section and enables the user to navigate to them by a click*/}
-        <section id="navigation">
+        <section id="navigation" className="box">
           <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#joke">Programming Joke</a></li>
           </ul>
         </section>
 
@@ -66,6 +68,13 @@ function App() {
 
           <div id="box4" className="box">
             <Contact />
+          </div>
+        </section>
+
+        <section id="joke">
+          <h2>Programming Joke</h2>
+          <div id="box5" className="box">
+            <JokeBox />
           </div>
         </section>
 
