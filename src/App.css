@@ -50,7 +50,7 @@ body {
     width: 10%;
     right: 10px;
     top: 10px;
-    z-index: -1;
+    z-index: 0;
     /* To make it always in the background */
     border-radius: 150px;
 }

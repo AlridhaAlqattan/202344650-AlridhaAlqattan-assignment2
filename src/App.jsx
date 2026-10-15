@@ -1,49 +1,20 @@
 import { useEffect,useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
+import TimeDate from './components/TimeDate.jsx'
+import kfupmLogo from './assets/kfupm-logo-300x284.webp'
 
-
-function showTime(date) {
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-}
-function showDate(date) {
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    return `${day.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}/${year}`;
-}
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(showTime(new Date()));
-  const [currentDate, setCurrentDate] = useState(showDate(new Date()));
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      setCurrentTime(showTime(now));
-      setCurrentDate(showDate(now));
-    }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
 
       <div id="wrap">
-        <a href="https://www.kfupm.edu.sa/"><img src="assets/kfupm-logo-300x284.webp" alt="KFUPM Logo" id="logo" /></a>
+        <a href="https://www.kfupm.edu.sa/"><img src={kfupmLogo} alt="KFUPM Logo" id="logo" /></a>
 
-        <div id="timeDate"> {/* This part uses Javascript to display time and date */}
-          <p>Date: <span id="date">{currentDate}</span></p>
-          <p>Time: <span id="time">{currentTime}</span></p>
-        </div>
+        <TimeDate />
 
         <div id="greet">
           <h1><strong>Alridha Alqattan Website</strong></h1>
