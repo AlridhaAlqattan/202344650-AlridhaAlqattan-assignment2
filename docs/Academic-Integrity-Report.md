@@ -11,7 +11,7 @@ ChatGPT was used as a supplementary tool to support learning, explain programmin
 
 Github Copilot integrated within VSCode was used as a tool to save time
 when writing code. As well as a source for ideas and suggestions.
-It helped me greatly in writing repeated elements like <li> elements or <p>
+It helped me greatly in writing repeated elements like li elements or p
 elements.
 
 AI assistance was not treated as a substitute for understanding the implementation. Suggestions were reviewed and adapted where appropriate. 
