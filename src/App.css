@@ -187,6 +187,25 @@ h3 {
 }
 
 #submit:hover {
-    background-color: lightblue;
+    background-color: lightyellow;
+    transform: scale(1.05);
+}
+
+#jokeButton {
+    width: 10rem;
+    max-width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px grey;
+    background-color: lightgreen;
+    font-size: 1rem;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#jokeButton:hover {
+    background-color:  lightyellow;
     transform: scale(1.05);
 }

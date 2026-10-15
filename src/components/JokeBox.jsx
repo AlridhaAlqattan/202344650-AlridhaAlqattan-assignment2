@@ -3,20 +3,39 @@ import {useState, useEffect} from 'react';
 
 function JokeBox() {
   const [joke, setJoke] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  function fetchJoke() {
+  async function fetchJoke() {
+    setLoading(true);
+    setError(null);
+    try { 
+        
     const url = "https://official-joke-api.appspot.com/jokes/programming/random";
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const jokeData = data[0];
-        setJoke(`${jokeData.setup}, ${jokeData.punchline}`);
-      })
-      .catch(error => {
-        console.error('Error fetching the joke:', error);
-        setJoke('Fetching a joke failed. apologies for the inconvenience.');
-      });
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch joke`);
     }
+
+  const data = await response.json();
+
+  if (!data.length) {
+    throw new Error(`There are no jokes available`);
+  }
+
+
+        setJoke(`${data[0].setup}, ${data[0].punchline}`);
+}
+      catch (error) {
+        console.error('Error fetching the joke:', error);
+        setJoke('');
+        setError('Failed to fetch joke. Please try again later.');
+      }
+      finally {
+        setLoading(false);
+      }
+    }
+    
 
     useEffect(() => {
         fetchJoke();}, []);
@@ -24,7 +43,10 @@ function JokeBox() {
     return (
         <div id="jokeBox">
             <p>{joke}</p>
-            <button onClick={fetchJoke}>Get Another Joke</button>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <button id="jokeButton" onClick={fetchJoke} disabled={loading} >
+                {loading ? 'Loading...' : 'Get Another Joke'}
+            </button>
         </div>
     );
 }
