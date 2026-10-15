@@ -1,55 +1,55 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
 
-  const [error, setError] = useState('');
+    const [error, setError] = useState('');
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
+    function handleSubmit(event) {
+        event.preventDefault();
 
-    if (!name || !email || !message) {
-      setError('You need to fill in all fields before submitting the form.');
-      return;
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const message = form.message.value;
+
+        if (!name || !email || !message) {
+            setError('You need to fill in all fields before submitting the form.');
+            return;
+        }
+
+        if (!email.includes('@') || !email.endsWith('.com')) {
+            setError('Email must contain "@" and end with ".com".');
+            return;
+        }
+
+        setFormData({ name, email, message });
+        alert('Your message has been sent successfully!');
+        form.reset();
     }
 
-    if (!email.includes('@') || !email.endsWith('.com')) {
-        setError('Email must contain "@" and end with ".com".');
-        return;
-    }
-
-    setFormData({ name, email, message });
-    alert('Your message has been sent successfully!');
-    form.reset();
-  }
-  
-  return (
-    <form onSubmit={handleSubmit} noValidate>
-      <div>
-        <label htmlFor="name">Name:</label><br />
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label> <br />
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label> <br />
-        <textarea id="message" name="message" required></textarea>
-      </div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-      <button type="submit" id="submit">Send Message</button>
-    </form>
-  );
+    return (
+        <form onSubmit={handleSubmit} noValidate>
+            <div>
+                <label htmlFor="name">Name:</label><br />
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+                <label htmlFor="email">Email:</label> <br />
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label htmlFor="message">Message:</label> <br />
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <button type="submit" id="submit">Send Message</button>
+        </form>
+    );
 }
 
 export default Contact;

@@ -16,23 +16,23 @@ function showDate(date) {
 }
 
 export default function TimeDate() {
-  const [currentTime, setCurrentTime] = useState(showTime(new Date()));
-  const [currentDate, setCurrentDate] = useState(showDate(new Date()));
+    const [currentTime, setCurrentTime] = useState(showTime(new Date()));
+    const [currentDate, setCurrentDate] = useState(showDate(new Date()));
 
-  useEffect(() => {
-      const interval = setInterval(() => {
-        const now = new Date();
-        setCurrentTime(showTime(now));
-        setCurrentDate(showDate(now));
-      }, 1000);
-  
-      return () => clearInterval(interval);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const now = new Date();
+            setCurrentTime(showTime(now));
+            setCurrentDate(showDate(now));
+        }, 1000);
+
+        return () => clearInterval(interval);
     }, []);
 
     return (
         <div id="timeDate"> {/* This part uses Javascript to display time and date */}
-          <p>Date: <span id="date">{currentDate}</span></p>
-          <p>Time: <span id="time">{currentTime}</span></p>
+            <p>Date: <span id="date">{currentDate}</span></p>
+            <p>Time: <span id="time">{currentTime}</span></p>
         </div>
     );
 }
