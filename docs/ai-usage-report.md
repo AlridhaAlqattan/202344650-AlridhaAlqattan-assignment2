@@ -55,3 +55,16 @@ Using AI as a supplementary learning tool helped reinforce concepts related to R
 
 The development process also emphasized the importance of reviewing suggested solutions, understanding the resulting code, and documenting the use of AI transparently.
 
+## Usage Log
+
+    | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
+    |C01|ChatGPT (GPT-5)|15/10/2026|Setting up React and migrating old code to new React app, Asking for suggestions for how to complete the assignment requirements, as well as making sure i met the requirements. Also, asking for code correction or suggestion for styling|Mainly App.css,App.jsx,Contact.jsx,JokeBox.jsx,TimeDate.jsx| I changed my code from js,html,css only to React and jsx, including certain parts like TimeDate that were converted to jsx components. I made sure all the components and styles worked correctly by viewing the live page|
+
+Note: I did not commit with a Assisted by GPT tag because i finished the assignment before the announcement of the AI declaration requirement.
+
+## Declaration
+I declare that this report and the attached evidence document all of my AI use in this assignment, with complete and unedited conversations, and that I understand and can explain all the code I submitted. I understand that undeclared AI use or a false declaration will be treated as plagiarism according to KFUPM regulations.
+Name: Alridha Alqattan
+ID: 202344650
+Date: 10/20/2026
+
