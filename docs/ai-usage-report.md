@@ -59,7 +59,7 @@ The development process also emphasized the importance of reviewing suggested so
 
 | ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
 |----|--------------|------|---------|----------------|------------------------------------------|
-|C01|ChatGPT (GPT-5)|15/10/2026|Setting up React and migrating old code to new React app, Asking for suggestions for how to complete the assignment requirements, like API suggestions, as well as making sure i met the requirements. Also, asking for code correction or suggestion for styling|Mainly App.css,App.jsx,Contact.jsx,JokeBox.jsx,TimeDate.jsx| I changed my code from js,html,css only to React and jsx, including certain parts like TimeDate that were converted to jsx components. I made sure all the components and styles and suggested API worked correctly by viewing the live page|
+|C01|ChatGPT (GPT--6-mini)|15/10/2026|Setting up React and migrating old code to new React app, Asking for suggestions for how to complete the assignment requirements, like API suggestions, as well as making sure i met the requirements. Also, asking for code correction or suggestion for styling|Mainly App.css,App.jsx,Contact.jsx,JokeBox.jsx,TimeDate.jsx| I changed my code from js,html,css only to React and jsx, including certain parts like TimeDate that were converted to jsx components. I made sure all the components and styles and suggested API worked correctly by viewing the live page|
 
 Note: I did not commit with a Assisted by GPT tag because i finished the assignment before the announcement of the AI declaration requirement.
 
